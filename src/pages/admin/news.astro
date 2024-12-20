@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NewsEditor from '../../components/admin/NewsEditor';
+import { supabase } from '../../lib/supabaseConfig';
+
+// Check if user is authenticated and is admin
+const { data: { session } } = await supabase.auth.getSession();
+const isAuthenticated = !!session;
+
+// Redirect if not authenticated
+if (!isAuthenticated) {
+  return Astro.redirect('/auth');
+}
+---
+
+<Layout title="Admin - Post News">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">Post News</h1>
+    <NewsEditor client:load />
+  </div>
+</Layout>

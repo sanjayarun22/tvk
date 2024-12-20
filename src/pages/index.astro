@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Modern News Blog">
+  <div class="hero-section">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-5xl font-bold mb-6">Welcome to Modern News</h1>
+      <p class="text-xl mb-8">Your trusted source for the latest updates and stories</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card">
+          <h2 class="text-2xl font-bold mb-4 text-primary">Latest News</h2>
+          <p class="text-gray-600 mb-4">Stay updated with breaking news and current events from around the world.</p>
+          <a href="/news" class="btn btn-primary">Read More</a>
+        </div>
+
+        <div class="card">
+          <h2 class="text-2xl font-bold mb-4 text-primary">Categories</h2>
+          <p class="text-gray-600 mb-4">Explore news by categories including politics, technology, sports, and more.</p>
+          <a href="/categories" class="btn btn-primary">Browse Categories</a>
+        </div>
+
+        <div class="card">
+          <h2 class="text-2xl font-bold mb-4 text-primary">Subscribe</h2>
+          <p class="text-gray-600 mb-4">Get the latest updates delivered directly to your inbox.</p>
+          <a href="#newsletter" class="btn btn-primary">Subscribe Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

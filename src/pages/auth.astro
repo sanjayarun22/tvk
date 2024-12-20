@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AuthForm from '../components/AuthForm';
+---
+
+<Layout title="Authentication - Modern News">
+  <div class="container mx-auto px-4 py-8">
+    <AuthForm client:load />
+  </div>
+</Layout>

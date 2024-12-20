@@ -1,0 +1,23 @@
+---
+import LanguageSwitch from './LanguageSwitch';
+import { translations } from '../lib/i18n/translations';
+const defaultLang = 'tamil';
+const t = translations[defaultLang];
+---
+
+<header class="bg-primary text-white shadow-lg">
+  <div class="container mx-auto px-4 py-6">
+    <nav class="flex flex-wrap justify-between items-center">
+      <a href="/" class="text-2xl font-bold flex items-center space-x-2">
+        <span>🐘</span>
+        <span>{t.siteName}</span>
+      </a>
+      <div class="flex items-center space-x-6">
+        <a href="/news" class="hover:text-secondary transition-colors">{t.latestNews}</a>
+        <a href="/categories" class="hover:text-secondary transition-colors">{t.categories}</a>
+        <a href="/auth" class="hover:text-secondary transition-colors">{t.signIn}</a>
+        <LanguageSwitch client:load />
+      </div>
+    </nav>
+  </div>
+</header>
